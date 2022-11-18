@@ -19,8 +19,13 @@
  * along with Fall.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
-import QtQuick
-import QtMultimedia
+//import QtQuick
+//import QtMultimedia
+
+// Lazy hack to make Qt 5.15.6 build happy
+// ToDo: How to modify CMakeLists.txt to ignore BkgVideoQt6.qml for Qt 5?
+import QtQuick 2.15
+import QtMultimedia 5.15
 
 Image {
     anchors.fill: parent
