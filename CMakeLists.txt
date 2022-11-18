@@ -88,3 +88,12 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_import_qml_plugins(Fall)
     qt_finalize_executable(Fall)
 endif()
+
+# Add target to run on embedded using Linux bootqt
+set(INSTALL_DESTDIR "/opt")
+
+install(TARGETS ${PROJECT_NAME}
+    RUNTIME DESTINATION "${INSTALL_DESTDIR}"
+    BUNDLE DESTINATION "${INSTALL_DESTDIR}"
+    LIBRARY DESTINATION "${INSTALL_DESTDIR}"
+)
